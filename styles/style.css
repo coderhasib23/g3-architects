@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;900&display=swap');
 *{
  margin: 0 auto;
+ padding: 0;
 }
+
+
 /* -----------
     Common CSS
 -------------- */
 body{
-    border: 1px solid red;
     font-family: 'Work Sans', sans-serif;
 }
 
@@ -22,13 +24,26 @@ body{
     cursor: pointer;
 }
 
+.btn-primary:hover{
+    background: transparent;
+    border: 1px solid #FF900E;
+    transition: 0.2s;
+    color: black;
+    cursor: pointer;
+}
+
 section{
     margin-bottom: 130px;
 }
-
+.text-title{
+    color: #131313;
+    font-size: 45px;
+    font-weight: 700px;
+}
 .text-color{
     color: #727272;
 }
+
 /* -----------------
     Logo & Nav styles 
 --------------------*/
@@ -49,6 +64,7 @@ section{
     color: #131313;
     font-size: 45px;
     font-weight: 700;
+    margin-right: 52%;
 }
 .nav ul{
     display: flex;
@@ -88,7 +104,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} 
 .left-side {
     flex: 1;
   }
@@ -120,7 +136,27 @@ section{
 .container.features-details .left-side{
     margin-right: 146px;
 }
+.img-with-button{
+    position: relative;
+    top: 50px;
+}
 
+.big-button{
+    position: relative;
+    padding: 45px 42px;
+    border-radius: 8px;
+    top: -100px;
+    left: -100px;
+}
+.big-button h1{
+    font-size: 65px;
+    font-weight: 700;
+}
+
+.big-button p{
+    font-size: 25px;
+    font-weight: 500;
+}
 
 .header h1{
     color: #131313;
@@ -148,7 +184,9 @@ section{
 /* ----------------------------------
     Portfolio 
 ------------------------------------*/
-
+.portfolio p{
+    margin-top: 24px;
+}
 
 
 
@@ -156,13 +194,92 @@ section{
 /* Portfolio items */
 .portfolio-items{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.portfolio-item{
+    border: 1px solid #FF900E;
+    border-radius: 8px;
+    padding: 50px 35px;
+    margin: 50px;
+    text-align: center;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
 
+.portfolio-item:hover{
+    box-shadow: inset 1000px 0 0 0 rgba(255, 144, 14,0.6);
+}
+
+.portfolio-item h3{
+    font-size: 45px;
+    font-weight: 600;
+    color: #424242;
+}
+.portfolio-item p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #727272;
+}
 
 /* ------------------------------
         Sponsors Area
 --------------------------------- */
+.sponsors{
+    text-align: center;
+}
+.sponsors p{
+    margin: 20px 0 50px;
+}
+.sponsors-items{
+    display: flex;
+}
+.sponsors-item img{
+    filter: grayscale(1);
+}
+
+.sponsors-item img:hover{
+    filter: none;
+}
+
+/* News letter area */
+.news-text{
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.from-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 231, 0.9);
+    width: 70%;
+    margin: 0 auto;
+    padding: 50px 0px;
+    margin-bottom: 100px;  
+}
+
+input{
+    margin: 0;
+    padding: 0;
+}
+input[type="email"]{
+    width: 50%;
+    height: 60px;
+    background: rgba(217, 217, 217, 1);
+    outline: none;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+input[type="submit"]{
+    border: none;
+}
+
+
 
 
 
@@ -185,7 +302,63 @@ footer .container{
 ----------------------*/
 /* Nav Responsive */
 @media screen and (max-width:576px) {
-    header, .nav ul{
-        flex-direction: column;
-    }
+   .menu, nav ul, 
+   .features-aria, 
+   .features-details, 
+   .portfolio-items, 
+   .sponsors-items,
+   .from-control
+   {
+    flex-direction: column;
+   }
+
+   .logo{
+    margin: 0;
+    margin-bottom: 20px;
+   }
+
+   .hero-title{
+    font-size: 25px
+   }
+   .hero-subtitle{
+    margin: 0;
+    padding: 0 10px;
+   }
+
+   .right-side 
+   .features-info, 
+   .container.features-details .left-side, 
+   .portfolio{
+    margin: 0 15px;
+   }
+
+   .hero-area img, 
+   .left-side img, 
+   .right-side, 
+   .container.features-aria 
+   .left-side, 
+   .container.features-details .right-side img, 
+   .from-control{
+    width: 100%;
+   }
+   
+   .big-button{
+    top: 0;
+    left: 75px;
+    padding: 10px 15px;
+   }
+   .big-button h1{
+    font-size: 30px;
+   }
+   
+   input[type="email"]{
+    width: 80%;
+   }
+   input.btn-primary{
+    padding: 10px 15px;
+   }
+
+   .sponsors-items{
+    gap: 30px;
+   }
 }
