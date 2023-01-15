@@ -339,9 +339,13 @@ footer .container{
     width: 100%;
    }
    
+   .info-title{
+    margin-top: 30px;
+   }
+
    .big-button{
     top: 0;
-    left: 75px;
+    left: 90px;
     padding: 10px 15px;
    }
    .big-button h1{
