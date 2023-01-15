@@ -26,6 +26,9 @@ section{
     margin-bottom: 130px;
 }
 
+.text-color{
+    color: #727272;
+}
 /* -----------------
     Logo & Nav styles 
 --------------------*/
@@ -114,12 +117,30 @@ section{
 /* --------------------------------
     Feature Details Area Style 
 -----------------------------------*/
+.container.features-details .left-side{
+    margin-right: 146px;
+}
+
+
 .header h1{
     color: #131313;
     font-size: 45px;
     font-weight: 700px;
     border-left: 5px solid #FF900E;
     padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.subheader{
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    padding: 30px;
+    margin: 40px 0;
+}
+.subheader h4{
+    font-size: 20px;
+    color: #131313;
+    font-weight: 600;
 }
 
 
